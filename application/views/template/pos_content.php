@@ -10,12 +10,12 @@
 <meta name="description" content="Avenxo Admin Theme">
 <meta name="author" content="">
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
       window.onload = function() {
        window.print();
         window.onfocus=function(){ window.close();}
    }
-</script> -->
+</script>
 <style>
     .receipt {
         width: 250px;
