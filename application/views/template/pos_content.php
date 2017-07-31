@@ -139,11 +139,11 @@
                     </div><br>
 
                     <div class="row">
-                        <div id="middle1" class="col-md-12">
+                        <div id="" class="col-md-12">
                             MIN#&nbsp;<br>
                             SN#&nbsp;<br>
                             FP#&nbsp;<br>
-                        </div>
+                        </div>  
                     </div><br>
 
                     <div class="row">
@@ -155,7 +155,12 @@
                                 Receipt&nbsp;<br>
                             </div>
                             <div id="right2">
-                                #&nbsp;:&nbsp;<?php echo  date_format(new DateTime($delivery_info->transaction_date),"m/d/Y"); ?><br>
+                                #&nbsp;:&nbsp;
+                                <?php 
+                                    $currentDateTime = $delivery_info->transaction_timestamp;
+                                    $newDateTime = date('m/d/Y h:i A', strtotime($currentDateTime));
+                                    echo $newDateTime;
+                                ?><br>
                                 #&nbsp;:&nbsp;<?php echo $delivery_info->cashier; ?><br>
                                 #&nbsp;:&nbsp;<?php echo $company_info->terminal; ?><br>
                                 #&nbsp;:&nbsp;<?php echo $delivery_info->receipt_no; ?><br>
